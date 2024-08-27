@@ -1,10 +1,13 @@
 import express from "express"
 import applyMiddleWare from "./middlewares/applyMiddleWare.js"
+import tablePost from "./routes/tableRoutes/tablePostRoute/index.js"
 
 
 const app =express()
 
 applyMiddleWare(app)
+
+app.use(tablePost)
 
 
 app.get("/health", (req, res)=>{
