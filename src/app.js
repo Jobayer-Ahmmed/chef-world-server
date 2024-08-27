@@ -1,6 +1,7 @@
 import express from "express"
 import applyMiddleWare from "./middlewares/applyMiddleWare.js"
 import tablePost from "./routes/tableRoutes/tablePostRoute/index.js"
+import tableGet from "./routes/tableRoutes/tableGetRoute/index.js"
 
 
 const app =express()
@@ -8,6 +9,7 @@ const app =express()
 applyMiddleWare(app)
 
 app.use(tablePost)
+app.use(tableGet)
 
 
 app.get("/health", (req, res)=>{
