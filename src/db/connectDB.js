@@ -3,8 +3,8 @@ import "dotenv/config"
 
 const getConnectionString=()=>{
     let connectionURI = process.env.MONGO_DB_CLOUD
-    connectionURI = connectionURI.replace("<username>", process.env.DB_USER)
-    connectionURI = connectionURI.replace("<password>", process.env.DB_PASS)
+    connectionURI = connectionURI.replace("<db_username>", process.env.DB_USER)
+    connectionURI = connectionURI.replace("<db_password>", process.env.DB_PASS)
     return connectionURI
 
 }
